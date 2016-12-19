@@ -10,11 +10,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class BuscarCep {
-
+	
+	public BuscarCep(){}
+	
 	public Cep buscar(String cep) throws JSONException, IOException {
 		String currentCep = cep;
 
-		String url = "http://viacep.com.br/ws/" + cep + "/json/";
+		String url = "http://viacep.com.br/ws/" + cep + "/json/unicode";
 
 		JSONObject obj = new JSONObject(getHttpGET(url));
 
